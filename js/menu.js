@@ -6,4 +6,5 @@ let menuHtml=`
 `;
 //取得DOM的節點
 let menu=document.getElementById('menu');
-menu.textContent = menuHtml
+//menu.textContent = menuHtml//寫入節點文字內容
+menu.innerHTML = menuHtml;
