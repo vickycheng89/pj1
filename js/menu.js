@@ -7,7 +7,7 @@ let menuHtml=`
 //取得DOM的節點
 let menu=document.getElementById('menu');
 //menu.textContent = menuHtml//寫入節點文字內容
-menu.innerHTML = menuHtml;//HTML寫入節點
+//menu.innerHTML = menuHtml;//HTML寫入節點
 
 let menuData=[
     {
@@ -27,3 +27,11 @@ let menuData=[
         url:'store.html'
     },
 ];
+/**
+ menuHtml = menuHtml+`<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="index.html">首頁</a></li>`
+ */
+menuHtml='';
+for(let row of menuData){
+menuHtml +=`<li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="${row.url}">${row.title}</a></li>`;}
+
+menu.innerHTML = menuHtml;
